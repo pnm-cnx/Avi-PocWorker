@@ -1,0 +1,24 @@
+{
+  "name": "Avi-PocWorker",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.2",
+  "description": "Avi-PocWorker",
+  "permissions": [
+    
+  ],
+  "manifest_version": 2,  
+  "content_scripts": [
+    {
+      "matches":["https://*.concentrix.com/*"],
+      "js": ["contentscript.js"]
+  }
+  ],
+  "background": {
+    "scripts": [
+      "background.js",
+      "processData.js"
+    ],  
+    
+    "persistent": false
+  }
+}
